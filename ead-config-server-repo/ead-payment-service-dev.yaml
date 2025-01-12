@@ -1,0 +1,59 @@
+server:
+  port: 8086
+  servlet:
+    context-path: '/ead-payment/'
+
+spring:
+  application:
+    name: ead-payment-service
+  datasource:
+    url:  jdbc:postgresql://localhost:5432/ead-payment
+    username: postgres
+    password: 123
+  jpa:
+    hibernate:
+      ddl-auto: update
+      dialect: org.hibernate.dialect.PostgreSQLDialect
+      jdbc:
+        lob.non-contextual-creation: true
+    properties:
+      hibernate:
+        show_sql: true
+  output:
+    ansi:
+      enabled: Always
+  rabbitmq:
+    addresses: amqps://hvyuqppf:Ay-qBRI53ggIuB0nBqG-44-pAurb9RY0@woodpecker.rmq.cloudamqp.com/hvyuqppf
+
+logging:
+  level:
+    com.ead: TRACE
+    root: INFO
+    org.springframework.web: DEBUG
+    org.hibernate: INFO
+
+ead:
+  broker:
+    exchange:
+      userEventExchange: ead.userevent
+      paymentCommandExchange: ead.paymentcommand
+      paymentEventExchange: ead.paymentevent
+    queue:
+      userEventQueue:
+        name: ead.userevent.ms.payment
+      paymentCommandQueue:
+       name: ead.paymentcommand.ms.payment
+    key:
+      paymentCommandKey: ms.payment
+  stripe:
+    secretKey: '{cipher}c27e5a211548c8a506368ff5ad156a18a8d706e6adf7b8e3f89cb96e0d775269684bfb8d7199c7bf48c2f19a079d28409b1e2f67d5686d59913750d228cafcbc7c261ea35f5dd9b388b1d052333e8442d1fdd220225dd4320975d0a6d59871c2943a50a3b15dbb6157676c40f546d6ffb0671311f91ef7ce85599f9395fe4db9'
+
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include:
+          - refresh
+          - health
+

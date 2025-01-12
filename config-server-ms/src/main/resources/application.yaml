@@ -1,0 +1,31 @@
+server:
+  port: 8888
+
+spring:
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/devwagnerdw/ead-config-server-repo
+          default-label: main
+  profiles:
+    active: dev
+  application:
+    name: ead-config-server
+
+ead:
+  configServer:
+    username: configserver
+    password: 'ead123cs'
+  serviceRegistry:
+    username: serviceregistry
+    password: 'ead123sr'
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: 'http://${ead.serviceRegistry.username}:${ead.serviceRegistry.password}@localhost:8761/eureka'
+  instance:
+    hostname: localhost
+encrypt:
+  key: cf83e1357eefb8bdf1542850d66d8007d620e4050b5715dc83f4a921d36ce9ce47d0d13c5d85f2b0ff8318d2877eec2f63b931bd47417a81a538327af927da3e
