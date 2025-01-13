@@ -24,16 +24,20 @@ A comunicação entre Course, Notification e outros serviços ocorre via mensage
 ## Estrutura dos Microsserviços
 
 ### 1. Authuser
-- Gerencia autenticação e autorização de usuários.
+- Gerencia autenticação e autorização de usuários.![Captura de tela 2025-01-13 122256](https://github.com/user-attachments/assets/49b85f64-bd68-4de9-bb35-030fa4253e1c)
+
 
 ### 2. Course
-- Lida com o cadastro e gerenciamento de cursos.
+- Lida com o cadastro e gerenciamento de cursos.![Captura de tela 2025-01-13 122724](https://github.com/user-attachments/assets/7f6b6c06-2303-4bce-8119-50ecd2da1ea5)
 
-### 3. Notification
-- Responsável pelo envio e controle de notificações.
 
-### 4. Service Registry
-- Eureka Server para registro e descoberta de serviços.
+### 3. Payment
+- Processa e gerencia pagamentos da plataforma.![Captura de tela 2025-01-13 123216](https://github.com/user-attachments/assets/f62de49d-a322-4def-855c-f6c9256dad48)
+
+
+### 4. Notification
+- Responsável pelo envio e controle de notificações.![Captura de tela 2025-01-13 123748](https://github.com/user-attachments/assets/345d5d7a-e2db-4f4c-ba76-858204023550)
+
 
 ### 5. API Gateway
 - Roteia requisições para os serviços apropriados..
@@ -44,8 +48,8 @@ A comunicação entre Course, Notification e outros serviços ocorre via mensage
 ### 7. ead-config-server-repo
 - Repositório Git que armazena as configurações externas dos microsserviços.
 
-### 8. Payment
-- Processa e gerencia pagamentos da plataforma.
+### 8. Service Registry
+- Eureka Server para registro e descoberta de serviços.
   
 ## Principais Tecnologias
 
