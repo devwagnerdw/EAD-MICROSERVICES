@@ -15,7 +15,7 @@ O cliente interage com os microsserviços por meio do API Gateway, que se conect
 #### 2.Fluxo Assíncrono:
 A comunicação entre Course, Notification e outros serviços ocorre via mensagens publicadas no RabbitMQ.
 
-#### 2.Componentes Centrais:
+#### Componentes Centrais:
 
 - Service Registry: Gerencia o registro e descoberta de microsserviços.
 - Config Server: Centraliza as configurações.
@@ -50,10 +50,11 @@ A comunicação entre Course, Notification e outros serviços ocorre via mensage
 ## Principais Tecnologias
 
 - **Spring Boot**: Framework para construção de microsserviços.
-- **Spring Cloud**: Integração e padrões para microsserviços.
+- **Spring Cloud**:Suporte para padrões de microsserviços como Service Discovery, API Gateway, e Config Server.
 - **Spring Security**: Autenticação e autorização com JWT.
 - **RabbitMQ**: Comunicação assíncrona entre serviços.
 - **PostgreSQL**: Banco de dados relacional.
+- **Circuit Breaker (Resilience4j)**:Resiliência em chamadas entre serviços.
 
 ## Configuração do Repositório do Config Server
 
