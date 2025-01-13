@@ -4,8 +4,6 @@
 Este projeto implementa uma arquitetura de microsserviços para uma plataforma de ensino a distância (EAD). Ele utiliza fluxos síncronos e assíncronos para fornecer um sistema escalável e modular, permitindo o gerenciamento de usuários, cursos, notificações e pagamentos.
 
 
-
-
 ## Estrutura da Arquitetura
 ![Captura de tela 2025-01-13 111415](https://github.com/user-attachments/assets/c5294d0a-ddef-493e-9611-2cff4f99a7e6)
 
@@ -21,8 +19,6 @@ A comunicação entre Course, Notification e outros serviços ocorre via mensage
 
 - Service Registry: Gerencia o registro e descoberta de microsserviços.
 - Config Server: Centraliza as configurações.
-
-
 
 
 ## Estrutura dos Microsserviços
@@ -51,6 +47,41 @@ A comunicação entre Course, Notification e outros serviços ocorre via mensage
 ### 8. Payment
 - Processa e gerencia pagamentos da plataforma.
 
+  ## Principais Tecnologias
+
+### Backend
+
+- **Spring Boot**: Framework para construção de microsserviços.
+- **Spring Cloud**: Integração e padrões para microsserviços.
+- **Spring Security**: Autenticação e autorização usando JWT.
+- **Java**: Linguagem de programação principal.
+
+### Comunicação
+
+- **RabbitMQ**: Corretor de mensagens para comunicação assíncrona.
+- **Spring Cloud Sleuth**: Rastreamento distribuído.
+- **Spring Cloud OpenFeign**: Comunicação síncrona entre microsserviços.
+
+### Bancos de Dados
+
+- **PostgreSQL**: Banco de dados relacional usado por vários microsserviços.
+- **MongoDB**: Banco de dados NoSQL para microsserviços específicos.
+
+### Observabilidade e Logs
+
+- **ElasticSearch**: Armazenamento e busca de logs.
+- **Logstash**: Coleta e processamento de logs.
+- **Kibana**: Visualização e análise de logs.
+- **Spring Boot Actuator**: Monitoramento e métricas para microsserviços.
+
+### Infraestrutura
+- **Config Server**: Gerenciamento centralizado de configurações (Spring Cloud Config).
+- **Service Registry**: Descoberta de serviços usando Eureka.
+
+### Segurança
+
+- **JWT (JSON Web Tokens)**: Autenticação e autorização.
+
 ## Configuração do Repositório do Config Server
 
 #### Você precisa criar um repositório Git separado para gerenciar as configurações dos microsserviços. Siga os passos abaixo:
@@ -62,10 +93,31 @@ A comunicação entre Course, Notification e outros serviços ocorre via mensage
 3. Atualize o arquivo application.yml no serviço Config Server para apontar para o seu repositório. Exemplo:
 
 ### Exemplo:
-spring:
-  cloud:
-    config:
-      server:
-        git:
-          uri: https://github.com/seu-usuario/ead-config-server-repo
-          default-label: main
+
+![Captura de tela 2025-01-13 111943](https://github.com/user-attachments/assets/bc9e035d-1c69-459a-8b78-d4cbf65ffbea)
+
+### Configuração do RabbitMQ
+Certifique-se de que você possui uma chave própria configurada para o RabbitMQ. Atualize o arquivo application.yml com as credenciais do seu serviço AMQP e garanta que essa chave seja atualizada em todos os ambientes configurados no repositório EAD Config Server Repo
+
+
+
+
+
+### Tecnologias Usadas
+
+- Java
+
+- Spring Boot
+
+- Spring Cloud
+
+- RabbitMQ
+
+- PostgreSQL
+
+- MongoDB
+
+- JWT (JSON Web Tokens)
+
+###  Contribuições
+Fique à vontade para fazer um fork deste repositório e enviar pull requests. Contribuições são bem-vindas!
