@@ -46,41 +46,14 @@ A comunicação entre Course, Notification e outros serviços ocorre via mensage
 
 ### 8. Payment
 - Processa e gerencia pagamentos da plataforma.
-
-  ## Principais Tecnologias
-
-### Backend
+  
+## Principais Tecnologias
 
 - **Spring Boot**: Framework para construção de microsserviços.
 - **Spring Cloud**: Integração e padrões para microsserviços.
-- **Spring Security**: Autenticação e autorização usando JWT.
-- **Java**: Linguagem de programação principal.
-
-### Comunicação
-
-- **RabbitMQ**: Corretor de mensagens para comunicação assíncrona.
-- **Spring Cloud Sleuth**: Rastreamento distribuído.
-- **Spring Cloud OpenFeign**: Comunicação síncrona entre microsserviços.
-
-### Bancos de Dados
-
-- **PostgreSQL**: Banco de dados relacional usado por vários microsserviços.
-- **MongoDB**: Banco de dados NoSQL para microsserviços específicos.
-
-### Observabilidade e Logs
-
-- **ElasticSearch**: Armazenamento e busca de logs.
-- **Logstash**: Coleta e processamento de logs.
-- **Kibana**: Visualização e análise de logs.
-- **Spring Boot Actuator**: Monitoramento e métricas para microsserviços.
-
-### Infraestrutura
-- **Config Server**: Gerenciamento centralizado de configurações (Spring Cloud Config).
-- **Service Registry**: Descoberta de serviços usando Eureka.
-
-### Segurança
-
-- **JWT (JSON Web Tokens)**: Autenticação e autorização.
+- **Spring Security**: Autenticação e autorização com JWT.
+- **RabbitMQ**: Comunicação assíncrona entre serviços.
+- **PostgreSQL**: Banco de dados relacional.
 
 ## Configuração do Repositório do Config Server
 
