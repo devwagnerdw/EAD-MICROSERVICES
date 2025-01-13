@@ -93,8 +93,6 @@ Certifique-se de que você possui uma chave própria configurada para o RabbitMQ
 
 - PostgreSQL
 
-- MongoDB
-
 - JWT (JSON Web Tokens)
 
 ###  Contribuições
