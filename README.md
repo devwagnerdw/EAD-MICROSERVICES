@@ -7,6 +7,8 @@ Este projeto implementa uma arquitetura de microsserviços para uma plataforma d
 
 
 ## Estrutura da Arquitetura
+![Captura de tela 2025-01-13 111415](https://github.com/user-attachments/assets/c5294d0a-ddef-493e-9611-2cff4f99a7e6)
+
 ## Explicação do Diagrama
 
 #### 1.Fluxo Síncrono:
